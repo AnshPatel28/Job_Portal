@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import FeaturedJobs from './components/FeaturedJobs'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -19,6 +20,7 @@ function App() {
     <div className={`min-h-screen ${darkMode ? 'dark bg-gray-900' : 'bg-white'} transition-colors duration-300`}>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero darkMode={darkMode}/>
+      <FeaturedJobs darkMode={darkMode}/>
     </div>
   )
 }
