@@ -3,6 +3,7 @@ import './App.css'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import FeaturedJobs from './components/FeaturedJobs'
+import HowItWorks from './components/HowItWorks'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -21,6 +22,7 @@ function App() {
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero darkMode={darkMode}/>
       <FeaturedJobs darkMode={darkMode}/>
+      <HowItWorks darkMode={darkMode}/>
     </div>
   )
 }
