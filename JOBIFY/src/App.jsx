@@ -4,6 +4,8 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import FeaturedJobs from './components/FeaturedJobs'
 import HowItWorks from './components/HowItWorks'
+import TopCompanies from './components/TopCompanies'
+import Footer from './components/Footer'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -23,6 +25,8 @@ function App() {
       <Hero darkMode={darkMode}/>
       <FeaturedJobs darkMode={darkMode}/>
       <HowItWorks darkMode={darkMode}/>
+      <TopCompanies darkMode={darkMode}/>
+      <Footer darkMode={darkMode}/>
     </div>
   )
 }
