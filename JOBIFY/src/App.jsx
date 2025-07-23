@@ -1,10 +1,28 @@
+import { useEffect, useState } from 'react'
 import './App.css'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import FeaturedJobs from './components/FeaturedJobs'
+import HowItWorks from './components/HowItWorks'
 
 function App() {
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedMode = localStorage.getItem('darkMode');
+    return savedMode ? JSON.parse(savedMode) : false;
+  });
+
+  const toggleDarkMode = () => {
+    const newMode = !darkMode;
+    setDarkMode(newMode);
+    localStorage.setItem('darkMode', JSON.stringify(newMode));
+  };
 
   return (
-    <div className="flex">
-      <h1 className="text-3xl font-extrabold mx-auto mt-20">Hello World! This is the testing of the Jobify - Job Portal github repo testing</h1>
+    <div className={`min-h-screen ${darkMode ? 'dark bg-gray-900' : 'bg-white'} transition-colors duration-300`}>
+      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Hero darkMode={darkMode}/>
+      <FeaturedJobs darkMode={darkMode}/>
+      <HowItWorks darkMode={darkMode}/>
     </div>
   )
 }
