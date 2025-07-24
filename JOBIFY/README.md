@@ -7,7 +7,7 @@ Jobify is a modern job portal web application built with React and Vite. It allo
 
 Add your deployed project link here:
 
-[Project Live Link](https://your-project-link.com)
+[Project Live Link](https://jobify-46.vercel.app/)
 
 ## Setup Instructions
 
