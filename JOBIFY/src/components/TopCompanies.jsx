@@ -1,21 +1,34 @@
+import Google from '../assets/Logo/google.svg';
+import Apple from '../assets/Logo/apple.svg';
+import Microsoft from '../assets/Logo/microsoft.svg';
+import Amazon from '../assets/Logo/amazon.svg';
+import Meta from '../assets/Logo/meta.svg';
+import Netflix from '../assets/Logo/netflix.svg';
+import Tesla from '../assets/Logo/tesla.svg';
+import Spotify from '../assets/Logo/spotify.svg';
+import Uber from '../assets/Logo/uber.svg';
+import Airbnb from '../assets/Logo/airbnb.svg';
+import Slack from '../assets/Logo/slack.svg';
+import Zoom from '../assets/Logo/zoom.svg';
+
 /**
  * @param {{ darkMode: boolean }} props
  */
 
 const TopCompanies = ({ darkMode }) => {
     const companies = [
-    { id: 1, name: 'Google', logo: '🌐', employees: '15k+' },
-    { id: 2, name: 'Apple', logo: '🍎', employees: '12k+' },
-    { id: 3, name: 'Microsoft', logo: '🪟', employees: '18k+' },
-    { id: 4, name: 'Amazon', logo: '📦', employees: '20k+' },
-    { id: 5, name: 'Meta', logo: '👁️', employees: '8k+' },
-    { id: 6, name: 'Netflix', logo: '🎬', employees: '5k+' },
-    { id: 7, name: 'Tesla', logo: '⚡', employees: '7k+' },
-    { id: 8, name: 'Spotify', logo: '🎵', employees: '4k+' },
-    { id: 9, name: 'Uber', logo: '🚗', employees: '6k+' },
-    { id: 10, name: 'Airbnb', logo: '🏠', employees: '3k+' },
-    { id: 11, name: 'Slack', logo: '💬', employees: '2k+' },
-    { id: 12, name: 'Zoom', logo: '📹', employees: '3k+' }
+    { id: 1, name: 'Google', logo: Google, employees: '15k+' },
+    { id: 2, name: 'Apple', logo: Apple, employees: '12k+' },
+    { id: 3, name: 'Microsoft', logo: Microsoft, employees: '18k+' },
+    { id: 4, name: 'Amazon', logo: Amazon, employees: '20k+' },
+    { id: 5, name: 'Meta', logo: Meta, employees: '8k+' },
+    { id: 6, name: 'Netflix', logo: Netflix, employees: '5k+' },
+    { id: 7, name: 'Tesla', logo: Tesla, employees: '7k+' },
+    { id: 8, name: 'Spotify', logo: Spotify, employees: '4k+' },
+    { id: 9, name: 'Uber', logo: Uber, employees: '6k+' },
+    { id: 10, name: 'Airbnb', logo: Airbnb, employees: '3k+' },
+    { id: 11, name: 'Slack', logo: Slack, employees: '2k+' },
+    { id: 12, name: 'Zoom', logo: Zoom, employees: '3k+' }
   ];
 
   return (
@@ -40,7 +53,7 @@ const TopCompanies = ({ darkMode }) => {
             >
               {/* Company Logo */}
               <div className={`w-16 h-16 mx-auto mb-4 ${darkMode ? 'bg-gray-700' : 'bg-gray-100'} rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-200`}>
-                {company.logo}
+                <img src={company.logo} className='w-14 h-14'/>
               </div>
 
               {/* Company Name */}
@@ -53,10 +66,6 @@ const TopCompanies = ({ darkMode }) => {
                 {company.employees} employees
               </p>
 
-              {/* View Jobs Button */}
-              <button className={`mt-4 px-4 py-2 ${darkMode ? 'bg-gray-700 hover:bg-gray-600 text-gray-300' : 'bg-gray-100 hover:bg-gray-200 text-gray-700'} rounded-lg text-sm font-medium transition-colors duration-200 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0`}>
-                View Jobs
-              </button>
             </div>
           ))}
         </div>
